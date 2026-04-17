@@ -1,29 +1,38 @@
-import os
+# 🎮 Game Library Manager (POO)
 
-readme_content = """# Sistema de Gestión de Biblioteca de Videojuegos 🎮
+Este repositorio contiene un sistema básico de gestión de biblioteca de videojuegos desarrollado en **Python**. El proyecto está diseñado para demostrar el dominio de conceptos fundamentales de la **Programación Orientada a Objetos (POO)**.
 
-Este es un proyecto de práctica desarrollado en Python para fortalecer conceptos fundamentales de **Programación Orientada a Objetos (POO)**, tales como la creación de clases, el manejo de atributos privados (encapsulamiento), el uso de listas de objetos y el ordenamiento de datos mediante funciones lambda.
+## 🚀 Características
 
-## ✨ Características
+- **Gestión de Usuarios:** Creación de perfiles con bibliotecas de juegos independientes.
+- **Encapsulamiento:** Uso de atributos privados (`__biblioteca`) para asegurar la integridad de los datos.
+- **Lógica de Juego:** Sistema para buscar títulos en la biblioteca y actualizar las horas de juego acumuladas.
+- **Reporte de Actividad:** Generación automática de un **Top 3** basado en el tiempo de juego utilizando funciones `lambda` y algoritmos de ordenamiento.
 
-- **Gestión de Usuarios:** Creación de perfiles de usuario con bibliotecas personalizadas.
-- **Encapsulamiento:** Uso de atributos privados (`__biblioteca`) para proteger la integridad de los datos.
-- **Registro de Actividad:** Método para buscar juegos específicos y actualizar las horas de juego de forma dinámica.
-- **Análisis de Datos:** Algoritmo de ordenamiento para determinar los 3 juegos más jugados por el usuario.
+## 🛠️ Tecnologías y Conceptos Aplicados
 
-## 🛠️ Tecnologías Utilizadas
+* **Lenguaje:** Python 3.x
+* **POO:** Clases, métodos de instancia, constructores (`__init__`) y manejo de estados.
+* **Data Handling:** Uso de listas, iteraciones con validación de existencia y ordenamiento avanzado de colecciones de objetos.
 
-- **Lenguaje:** Python 3.x
-- **Conceptos clave:** - Clases y Objetos.
-  - Métodos de instancia.
-  - Manejo de listas y ciclos.
-  - Funciones Lambda para ordenamiento de colecciones.
+## 📂 Estructura del Proyecto
 
-## 🚀 Cómo ejecutar el código
+El código se divide en dos clases principales:
 
-1. Asegúrate de tener Python instalado en tu sistema.
-2. Clona este repositorio o descarga el archivo `.py`.
-3. Ejecuta el script desde tu terminal:
+1.  **`usuario`**: Encargada de la lógica de negocio, manejo de la biblioteca privada y visualización de estadísticas.
+2.  **`videojuego`**: Clase modelo que define las propiedades esenciales de cada título (Título, Género, Horas Jugadas).
 
-```bash
-python nombre_del_archivo.py
+## 💻 Ejemplo de Ejecución
+
+```python
+# Crear una instancia de usuario
+mi_usuario = usuario("Jose")
+
+# Crear instancias de videojuegos
+mi_juego1 = videojuego("Valorant", "Shooter", 500)
+mi_juego2 = videojuego("Minecraft", "Mundo abierto", 1000)
+
+# Interactuar con el sistema
+mi_usuario.agregar_juego(mi_juego1)
+mi_usuario.jugar("Valorant", 200)
+mi_usuario.top_3_mas_jugados()
